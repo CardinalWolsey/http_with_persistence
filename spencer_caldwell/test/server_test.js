@@ -42,7 +42,7 @@ describe('the POST route', function() {
       .post('/something/test')
       .end(function(err, res) {
         expect(err).to.eql(null);
-        expect(res.status).to.eql(200)
+        expect(res.status).to.eql(200);
         done();
       });
   });

@@ -6,7 +6,7 @@ var fs = require('fs');
 app.use(parser.json());
 
 app.get('/something/:name', function(req, res) {
-  var jsonData = fs.readFileSync(__dirname + '/data/' + req.params.name + '.json', 'utf-8')
+  var jsonData = fs.readFileSync(__dirname + '/data/' + req.params.name + '.json', 'utf-8');
   res.json(jsonData);
 });
 
@@ -17,7 +17,7 @@ app.post('/something/:name', function(req, res) {
   res.end();
 });
 
-var server = http.createServer(app)
+var server = http.createServer(app);
 server.listen(3000, function() {
-  console.log('server is up and listening on port 3000')
+  console.log('server is up and listening on port 3000');
 });
